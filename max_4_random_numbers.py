@@ -16,3 +16,11 @@ else:
     print("The biggest number is %.2f" % d)
 
 # determine the second largest number
+
+# is this cheating??
+numbers = [a, b, c, d]
+numbers.sort(reverse=True)
+print(numbers[1])
+
+
+

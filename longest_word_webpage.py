@@ -26,7 +26,7 @@ for line in fd:
 print("longest words is:", longest)
 fd.close()
 
-fd = open("trex.txt", "r")
+fd = open("example.txt", "r")
 all_words = []
 for line in fd:
     #  line = line.decode()
@@ -40,7 +40,24 @@ for line in fd:
 all_words.sort()
 print("all the words are", all_words)
 print("distinct words", len(all_words))
+fd.close()
 
 # write a program that counts all the distinct words that appear at least twice in the file
 
+fd = open("example.txt", "r")
+every_word = []
+repeated = []
+for line in fd:
+    for c in punctuation2:
+        line = line.replace(c, " ")
+    words = line.split()
+    for word in words:
+        if word in every_word and word not in repeated:
+            repeated.append(word)
+        every_word.append(word)
+
+fd.close()
+print(every_word)
+
+print("There are", len(repeated), "repeated words.")
 

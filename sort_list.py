@@ -89,4 +89,6 @@ print("merge_sort time was: ", datetime.datetime.now() - start)
 print("Sorted list:", a)
 
 # Which sort is the best? Which is the worst?
+    # quick is the best, the worst is bubble sort
 # Which of the algorithms are recursive?
+    # The quick sort is recursive because it calls itself.

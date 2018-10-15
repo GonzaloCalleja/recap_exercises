@@ -9,7 +9,7 @@
 import random
 seed = random.randint(1, 10)
 alphabet = "abcdefghijklmnopqrstuvwxyz"
-text = input("What is the text to encode?")
+text = input("What is the text to encode? ")
 text = text.lower()
 encoded = ""
 for c in text:
@@ -23,3 +23,13 @@ print("The encoded text is:", encoded)
 
 
 # decode the text back to the original value!
+
+decoded = ""
+for c in encoded:
+    encoded_pos = alphabet.find(c)
+    if encoded_pos == -1:
+        decoded = decoded + c
+        continue
+    old_pos = (encoded_pos - seed) % 26
+    decoded = decoded + alphabet[old_pos]
+print("The decoded text is:", decoded)

@@ -47,3 +47,7 @@ else:
     print("Acute")
 
 # Print the area of the Triangle
+
+area = a * b /2
+
+print("The are of this triangle is: ", area)
